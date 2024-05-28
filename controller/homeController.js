@@ -1,3 +1,12 @@
+const Product = require("../models/productData");
+
 module.exports = (req, res) => {
-    res.render('home');
+    Product.find().then((products) => {
+        console.log(products);
+        console.log(typeof products);
+        res.render('home', { products });
+    }).catch((error) => {
+        console.error('Error fetching data:', error);
+    });
+    console.log("heasdasdasdasdasdasdasdasdasdasd");
 }

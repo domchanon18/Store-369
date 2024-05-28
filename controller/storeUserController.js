@@ -1,4 +1,4 @@
-// get data from user and create/updatet to database
+// get data from user and create/update to database
 const user = require("../models/user");
 
 module.exports = (req, res) => {
