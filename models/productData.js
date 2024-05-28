@@ -19,9 +19,17 @@ const productSchema = new Schema({
         required: true
     }
 
-}, { timestamps: true });
+});
 
 // connect to mongoDB collection
 const product = mongoose.model('Battery', productSchema);
 module.exports = product;
-console.log(product.find().name);
+let x;
+// Fetch all documents
+/*product.find().then((products) => {
+    x = console.log(products);
+}).catch((error) => {
+    console.error('Error fetching data:', error);
+});
+
+console.log(typeof x);*/
