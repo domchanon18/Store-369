@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Store Front Selection</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        .header {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 1rem;
+        }
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin: 2rem auto;
+            max-width: 1200px;
+        }
+        .product {
+            background-color: white;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            margin: 1rem;
+            padding: 1rem;
+            max-width: 300px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s;
+            width: 250px;
+            height: 200px;
+        }
+        .product:hover {
+            transform: scale(1.05);
+        }
+        .product img {
+            max-width: 100%;
+            border-radius: 5px 5px 0 0;
+        }
+        .product h2 {
+            font-size: 1.5rem;
+            margin: 0.5rem 0;
+        }
+        .product p {
+            color: #666;
+        }
+        .product .price {
+            color: #e91e63;
+            font-size: 1.2rem;
+            font-weight: bold;
+        }
+        .product button {
+            background-color: #e91e63;
+            color: white;
+            border: none;
+            padding: 0.5rem 1rem;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+        .product button:hover {
+            background-color: #d81b60;
+        }
+        .btn {
+            display: inline-block;
+            font-weight: 400;
+            line-height: 1.5;
+            color: #212529;
+            text-align: center;
+            text-decoration: none;
+            vertical-align: middle;
+            cursor: pointer;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            user-select: none;
+            background-color: transparent;
+            border: 1px solid transparent;
+            padding: .375rem .75rem;
+            font-size: 1rem;
+            border-radius: .25rem;
+            transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out
+        }
+        .btn-danger {
+            color: #fff;
+            background-color: #dc3545;
+            border-color: #dc3545
+        }
+        .btn-danger:hover {
+            color: #fff;
+            background-color: #bb2d3b;
+            border-color: #b02a37
+        }
+        .btn-sm {
+            padding: .25rem .5rem;
+            font-size: .875rem;
+            border-radius: .2rem
+        }
+        .btn-outline-secondary {
+            color: #fff;
+            border-color: #fff
+        }
+        .btn-outline-secondary:hover {
+            color: #fff;
+            background-color: #15ad3d;
+            border-color: #15ad3d
+        }
+        .mx-3 {
+            margin-right: 1rem !important;
+            margin-left: 1rem !important
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>Store 369</h1>
+        <!-- btn sign in/sign up and logout -->
+        <a class="btn btn-sm btn-outline-secondary mx-3" href="/login">Sign In</a>
+    </div>
+    <div class="container">
+        <div class="product">
+            <img src="./Assets/Duracell_AA.png" alt="Product 1">
+            <h2>Battery 1</h2>
+            <p>TBA</p>
+            <p class="price">TBA</p>
+            <button>Add to Cart</button>
+        </div>
+        <div class="product">  
+            <img src="./Assets/Duracell_AA.png" alt="Product 2">
+            <h2>Battery 2</h2>
+            <p>TBA</p>
+            <p class="price">TBA</p>
+            <button>Add to Cart</button>
+        </div>
+        <div class="product">
+            <img src="./Assets/Duracell_AA.png" alt="Product 3">
+            <h2>Battery 3</h2>
+            <p>TBA</p>
+            <p class="price">TBA</p>
+            <button>Add to Cart</button>
+        </div>
+        <!-- Add more products as needed -->
+
+        <script type="javascript">
+            const express = require('express');
+            const router = express.router();
+
+        </script>
+    </div>
+</body>
+</html>
