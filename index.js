@@ -20,6 +20,9 @@ const homeController = require("./controller/homeController.js");
 const logoutController = require("./controller/logoutController.js");
 const registerController = require("./controller/registerController.js");
 const storeUserController = require("./controller/storeUserController.js");
+const addItemController = require("./controller/addItemController.js");
+const storeEmpController = require("./controller/storeEmpController.js");
+const showProductController = require("./controller/showProductController.js");
 
 //middleware
 const authmiddleware = require("./middleware/authMiddleware.js");
@@ -40,13 +43,15 @@ app.engine('html', require('ejs').renderFile);
 app.set('view engine', 'html');
 
 // route
-app.get('/', indexController);
+app.get('/', showProductController, indexController);
 app.get('/login', redirectIfAuth, loginController);
-app.get('/home', authmiddleware, homeController);
+app.get('/home', authmiddleware, homeController, showProductController);
 app.get('/logout', logoutController);
 app.get('/register', redirectIfAuth, registerController);
+app.get('/addItem', authmiddleware, addItemController);
 app.post('/user/login', redirectIfAuth, loginUserController);
 app.post('/user/register', storeUserController);
+app.post('/user/addItem', storeEmpController);
 
 
 // [npm run start] to start server with nodemon
